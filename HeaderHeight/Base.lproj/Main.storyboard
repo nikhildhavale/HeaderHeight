@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <containerView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="pg3-KH-G7f">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="22"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <connections>
                                         <segue destination="Zh2-h0-5Qj" kind="embed" id="ea1-MN-aud"/>
@@ -65,11 +65,11 @@
             <objects>
                 <viewController id="Zh2-h0-5Qj" customClass="ChildViewController" customModule="HeaderHeight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7VP-vv-iUY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcZ-UG-uK8">
-                                <rect key="frame" x="20" y="68" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="11" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -81,6 +81,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="RcZ-UG-uK8" secondAttribute="trailing" id="Vav-tQ-eci"/>
                             <constraint firstItem="RcZ-UG-uK8" firstAttribute="leading" secondItem="7VP-vv-iUY" secondAttribute="leadingMargin" id="dNY-6g-bdo"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="ViR-Z4-W9I"/>
                     </view>
                     <connections>
                         <outlet property="sampleLabel" destination="RcZ-UG-uK8" id="Mus-Fw-bw3"/>

@@ -34,11 +34,10 @@ class ViewController: UIViewController,UITableViewDataSource {
             var firstText = childController.sampleLabel.text ?? ""
             firstText += ViewController.sampleText
             childController.sampleLabel.text = firstText
-            childController.sampleLabel.sizeToFit()
-            tableView.reloadData()
-//            self.view.setNeedsUpdateConstraints()
-//            self.view.layoutIfNeeded()
-            
+            containerView.layoutIfNeeded()
+          //  childController.sampleLabel.sizeToFit()
+           // containerView.setNeedsUpdateConstraints()
+
             
         }
     }
@@ -46,11 +45,11 @@ class ViewController: UIViewController,UITableViewDataSource {
         if let childController = self.children.first as? ChildViewController
         {
             childController.sampleLabel.text = nil
-            childController.sampleLabel.sizeToFit()
-            tableView.reloadData()
+            containerView.layoutIfNeeded()
 
-//            self.view.setNeedsUpdateConstraints()
-//            self.view.layoutIfNeeded()
+          //  childController.sampleLabel.sizeToFit()
+         //   containerView.setNeedsUpdateConstraints()
+         
 
         }
     }

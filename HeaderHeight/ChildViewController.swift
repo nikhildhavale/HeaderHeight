@@ -22,7 +22,7 @@ class ChildViewController: UIViewController {
         if let parent = self.parent as? ViewController ,heightEqualityConstraint == nil, widthConstraint == nil
               {
                   parent.containerView.translatesAutoresizingMaskIntoConstraints = false
-                  widthConstraint = parent.containerView.widthAnchor .constraint(equalToConstant: UIScreen.main.bounds.width)
+                widthConstraint = parent.containerView.widthAnchor .constraint(equalTo: parent.tableView.widthAnchor)
                   widthConstraint?.isActive = true
                   heightEqualityConstraint = parent.containerView.heightAnchor.constraint(equalTo: sampleLabel.heightAnchor, multiplier: 1)
                   heightEqualityConstraint?.isActive = true
