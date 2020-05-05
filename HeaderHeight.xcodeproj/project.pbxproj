@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F1126D4A24618C4F00BEBC69 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1126D4924618C4F00BEBC69 /* TableViewCell.swift */; };
+		F1126D4D2461933A00BEBC69 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1126D4C2461933A00BEBC69 /* WebKit.framework */; };
 		F1561F0F246175490048B567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1561F0E246175490048B567 /* AppDelegate.swift */; };
 		F1561F11246175490048B567 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1561F10246175490048B567 /* SceneDelegate.swift */; };
 		F1561F13246175490048B567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1561F12246175490048B567 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		F1126D4924618C4F00BEBC69 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		F1126D4C2461933A00BEBC69 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F1561F0B246175490048B567 /* HeaderHeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeaderHeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1561F0E246175490048B567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1561F10246175490048B567 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +37,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1126D4D2461933A00BEBC69 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1126D4B2461933A00BEBC69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1126D4C2461933A00BEBC69 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F1561F02246175490048B567 = {
 			isa = PBXGroup;
 			children = (
 				F1561F0D246175490048B567 /* HeaderHeight */,
 				F1561F0C246175490048B567 /* Products */,
+				F1126D4B2461933A00BEBC69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

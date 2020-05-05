@@ -7,15 +7,20 @@
 //
 
 import UIKit
-
+import WebKit
 class ChildViewController: UIViewController {
     @IBOutlet weak var sampleLabel: UILabel!
+    @IBOutlet weak var webView: WKWebView!
     var heightEqualityConstraint:NSLayoutConstraint?
     var widthConstraint:NSLayoutConstraint?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        webView.load(URLRequest(url: URL(string: "http://help.websiteos.com/websiteos/example_of_a_simple_html_page.htm")!))
         // Do any additional setup after loading the view.
+        ///    [self.webView.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+
+        webView.scrollView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+        webView.scrollView.isScrollEnabled = false
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -24,10 +29,21 @@ class ChildViewController: UIViewController {
                   parent.containerView.translatesAutoresizingMaskIntoConstraints = false
                 widthConstraint = parent.containerView.widthAnchor .constraint(equalTo: parent.tableView.widthAnchor)
                   widthConstraint?.isActive = true
-                  heightEqualityConstraint = parent.containerView.heightAnchor.constraint(equalTo: sampleLabel.heightAnchor, multiplier: 1)
+                heightEqualityConstraint = parent.containerView.heightAnchor.constraint(equalToConstant: webView.scrollView.contentSize.height)
                   heightEqualityConstraint?.isActive = true
-
+                ///
               }
+        
+        
+    }
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "contentSize"
+        {
+            heightEqualityConstraint?.constant = webView.scrollView.contentSize.height
+        }
+    }
+    deinit {
+        webView.scrollView.removeObserver(self, forKeyPath: "contentSize")
     }
     override func updateViewConstraints() {
         super.updateViewConstraints()
