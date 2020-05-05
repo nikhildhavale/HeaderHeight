@@ -31,7 +31,7 @@ class ChildViewController: UIViewController {
                   widthConstraint?.isActive = true
                 heightEqualityConstraint = parent.containerView.heightAnchor.constraint(equalToConstant: webView.scrollView.contentSize.height)
                   heightEqualityConstraint?.isActive = true
-                ///
+                //heightEqualityConstraint = parent.containerView.heightAnchor.constraint(equalTo: sampleLabel.heightAnchor, multiplier: 1)
               }
         
         
