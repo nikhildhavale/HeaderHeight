@@ -40,6 +40,16 @@ class ChildViewController: UIViewController {
         if keyPath == "contentSize"
         {
             heightEqualityConstraint?.constant = webView.scrollView.contentSize.height
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                // your code here
+                if let parent = self.parent as? ViewController
+                {
+                    parent.tableView.reloadData()
+                    
+                }
+                
+            }
+
         }
     }
     deinit {
