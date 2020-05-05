@@ -25,6 +25,32 @@
                                         <segue destination="Zh2-h0-5Qj" kind="embed" id="ea1-MN-aud"/>
                                     </connections>
                                 </containerView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="identifier" id="11q-js-sBI" customClass="TableViewCell" customModule="HeaderHeight" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="21.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="11q-js-sBI" id="fbI-U1-Pu4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIJ-J8-q0y">
+                                                    <rect key="frame" x="186" y="0.0" width="42" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lIJ-J8-q0y" firstAttribute="top" secondItem="fbI-U1-Pu4" secondAttribute="top" id="9c0-E1-qp9"/>
+                                                <constraint firstItem="lIJ-J8-q0y" firstAttribute="centerX" secondItem="fbI-U1-Pu4" secondAttribute="centerX" id="hLx-Of-yTI"/>
+                                                <constraint firstAttribute="bottom" secondItem="lIJ-J8-q0y" secondAttribute="bottom" id="rVR-ys-3w9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="lIJ-J8-q0y" id="YTJ-cQ-SYb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="mBT-gr-2oC"/>
                                 </connections>

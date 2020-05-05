@@ -15,8 +15,15 @@ class ViewController: UIViewController,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "identfier", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath)
+        if let tableCell = cell as? TableViewCell
+        {
+            tableCell.titleLabel.text = "\(indexPath.row)"
+        }
+        else{
+            cell.textLabel?.text = "\(indexPath.row)"
+
+        }
         return cell
     }
     
@@ -24,7 +31,7 @@ class ViewController: UIViewController,UITableViewDataSource {
     @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "identfier")
+       // tableView.register(UITableViewCell.self, forCellReuseIdentifier: "identifier")
         // Do any additional setup after loading the view.
     }
 
@@ -34,25 +41,43 @@ class ViewController: UIViewController,UITableViewDataSource {
             var firstText = childController.sampleLabel.text ?? ""
             firstText += ViewController.sampleText
             childController.sampleLabel.text = firstText
-            containerView.layoutIfNeeded()
-          //  childController.sampleLabel.sizeToFit()
-           // containerView.setNeedsUpdateConstraints()
+            childController.sampleLabel.sizeToFit()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                // your code here
+                self.tableView.reloadData()
 
-            
+            }
+
+
         }
     }
     @IBAction func resetButtonClicked(_ sender: Any) {
         if let childController = self.children.first as? ChildViewController
         {
             childController.sampleLabel.text = nil
-            containerView.layoutIfNeeded()
-
-          //  childController.sampleLabel.sizeToFit()
-         //   containerView.setNeedsUpdateConstraints()
-         
+            childController.sampleLabel.sizeToFit()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                // your code here
+                self.tableView.reloadData()
+                
+            }
 
         }
     }
     
 }
 
+extension UITableView
+{
+    /// Update header view's frame.
+    func updateHeaderViewFrame() {
+        guard let headerView = self.tableHeaderView else { return }
+        
+        // Update the size of the header based on its internal content.
+        headerView.layoutIfNeeded()
+        
+        // ***Trigger table view to know that header should be updated.
+        let header = self.tableHeaderView
+        self.tableHeaderView = header
+    }
+}

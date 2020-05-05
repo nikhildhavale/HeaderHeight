@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1126D4A24618C4F00BEBC69 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1126D4924618C4F00BEBC69 /* TableViewCell.swift */; };
 		F1561F0F246175490048B567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1561F0E246175490048B567 /* AppDelegate.swift */; };
 		F1561F11246175490048B567 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1561F10246175490048B567 /* SceneDelegate.swift */; };
 		F1561F13246175490048B567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1561F12246175490048B567 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1126D4924618C4F00BEBC69 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F1561F0B246175490048B567 /* HeaderHeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeaderHeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1561F0E246175490048B567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1561F10246175490048B567 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				F1561F10246175490048B567 /* SceneDelegate.swift */,
 				F1561F12246175490048B567 /* ViewController.swift */,
 				F1561F14246175490048B567 /* Main.storyboard */,
+				F1126D4924618C4F00BEBC69 /* TableViewCell.swift */,
 				F1561F22246175900048B567 /* ChildViewController.swift */,
 				F1561F172461754A0048B567 /* Assets.xcassets */,
 				F1561F192461754A0048B567 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1126D4A24618C4F00BEBC69 /* TableViewCell.swift in Sources */,
 				F1561F13246175490048B567 /* ViewController.swift in Sources */,
 				F1561F0F246175490048B567 /* AppDelegate.swift in Sources */,
 				F1561F11246175490048B567 /* SceneDelegate.swift in Sources */,
